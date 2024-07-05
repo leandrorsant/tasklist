@@ -1,0 +1,36 @@
+### Create task
+POST http://127.0.0.1:8000/api/tasks?project_id=1
+Content-Type: application/json
+
+{
+    "title": "Title",
+    "description": "Description"
+}
+
+### List a project's tasks
+GET http://127.0.0.1:8000/api/tasks?project_id=1
+
+### Get task by id
+GET http://127.0.0.1:8000/api/tasks/1
+
+### Update a task by id
+PUT http://127.0.0.1:8000/api/tasks/1
+Content-Type: application/json
+
+{
+    "title": "Title edited",
+    "description": "Description edited"
+}
+
+### Reorder project tasks
+PUT http://127.0.0.1:8000/api/tasks
+Content-Type: application/json
+
+{
+    "project_id": "1",
+    "start": "1",
+    "end": "2"
+}
+
+### Delete a task by id
+DELETE http://127.0.0.1:8000/api/tasks/11
